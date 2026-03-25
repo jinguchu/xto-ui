@@ -1,0 +1,38 @@
+{
+  "name": "@xto/feedback",
+  "version": "1.1.0",
+  "description": "Xto Feedback - Feedback components",
+  "main": "./lib/index.cjs",
+  "module": "./es/index.mjs",
+  "types": "./es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./es/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./es/index.d.ts"
+    }
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@xto/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@xto/build": "workspace:*",
+    "typescript": "^5.4.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@xto/core",
+  "version": "1.0.1",
+  "description": "Xto Core - Theme, hooks, utils and types",
+  "main": "./lib/index.cjs",
+  "module": "./es/index.mjs",
+  "types": "./es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./es/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./es/index.d.ts"
+    },
+    "./theme": {
+      "import": "./es/theme/index.mjs",
+      "require": "./lib/theme/index.cjs",
+      "types": "./es/theme/index.d.ts"
+    },
+    "./hooks": {
+      "import": "./es/hooks/index.mjs",
+      "require": "./lib/hooks/index.cjs",
+      "types": "./es/hooks/index.d.ts"
+    },
+    "./utils": {
+      "import": "./es/utils/index.mjs",
+      "require": "./lib/utils/index.cjs",
+      "types": "./es/utils/index.d.ts"
+    }
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@xto/build": "workspace:*",
+    "typescript": "^5.4.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21"
+  }
+}

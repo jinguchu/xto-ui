@@ -1,0 +1,34 @@
+{
+  "name": "xto",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@8.15.0",
+  "description": "Xto - Vue 3 Component Library",
+  "author": "Xto Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo run dev --filter=@xto/play",
+    "docs": "turbo run dev --filter=@xto/docs",
+    "build": "turbo run build",
+    "build:all": "turbo run build --filter=!./play",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "prepare": "husky install",
+    "release": "changeset publish",
+    "release:all": "bash scripts/release-all.sh",
+    "publish:dist": "bash scripts/publish-dist.sh",
+    "version": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "husky": "^8.0.3",
+    "sass-embedded": "^1.98.0",
+    "turbo": "^1.13.0",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

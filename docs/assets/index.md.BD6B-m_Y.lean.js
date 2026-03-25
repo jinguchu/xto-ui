@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as i,aq as e}from"./chunks/framework.YkPYWosk.js";const g=JSON.parse('{"title":"Xto UI","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),n={name:"index.md"};function r(l,t,o,p,h,d){return s(),i("div",null,[...t[0]||(t[0]=[e("",20)])])}const c=a(n,[["render",r]]);export{g as __pageData,c as default};

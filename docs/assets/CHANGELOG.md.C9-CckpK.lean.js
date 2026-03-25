@@ -1,1 +1,0 @@
-import{_ as e,o,c as i,aq as l}from"./chunks/framework.YkPYWosk.js";const b=JSON.parse('{"title":"@xto/docs","description":"","frontmatter":{},"headers":[],"relativePath":"CHANGELOG.md","filePath":"CHANGELOG.md"}'),r={name:"CHANGELOG.md"};function t(h,a,n,c,d,s){return o(),i("div",null,[...a[0]||(a[0]=[l("",33)])])}const m=e(r,[["render",t]]);export{b as __pageData,m as default};

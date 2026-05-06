@@ -1,5 +1,11 @@
 ﻿# @xto/core
 
+## 1.0.3
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+
 ## 1.0.0
 
 ### Major Changes

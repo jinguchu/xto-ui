@@ -1,5 +1,29 @@
 ﻿# @xto/data
 
+## 1.1.4
+
+### Patch Changes
+
+- Fix Table component fixed column support and DatePicker showTime feature
+  - Table: Add proper sticky positioning for fixed columns (left/right)
+  - Table: Fix column ordering to preserve insertion order
+  - TableColumn: Make prop optional for operation columns
+  - DatePicker: Add showTime prop with time selector UI
+
+## 1.1.3
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+
+## 1.1.2
+
+### Patch Changes
+
+- Rebuild to ensure all components (Tag, Empty, Timeline, TimelineItem) are properly exported
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,7 +1,13 @@
 {
   "name": "@xto/core",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Xto Core - Theme, hooks, utils and types",
+  "homepage": "https://jinguchu.github.io/xto-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinguchu/xto-ui.git",
+    "directory": "packages/core"
+  },
   "main": "./lib/index.cjs",
   "module": "./es/index.mjs",
   "types": "./es/index.d.ts",

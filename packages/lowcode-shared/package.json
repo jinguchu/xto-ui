@@ -1,0 +1,47 @@
+{
+  "name": "@xto/lowcode-shared",
+  "version": "0.0.2",
+  "description": "Xto Lowcode Shared - Schema definitions and utilities for low-code components",
+  "homepage": "https://jinguchu.github.io/xto-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinguchu/xto-ui.git",
+    "directory": "packages/lowcode-shared"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./es/index.mjs",
+  "types": "./es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./es/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./es/index.d.ts"
+    }
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "zod": "^3.22.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "typescript": "^5.4.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21"
+  }
+}

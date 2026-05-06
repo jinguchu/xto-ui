@@ -1,10 +1,36 @@
 ﻿# @xto/base
 
+## 1.3.6
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+
+## 1.3.5
+
+### Patch Changes
+
+- Fix Empty component missing computed import
+
+## 1.3.4
+
+### Patch Changes
+
+- Add Empty and Tag components for UI display needs
+
+## 1.3.3
+
+### Patch Changes
+
+- Add Empty component for empty state display
+
 ## 1.1.3
 
 ### Patch Changes
 
-- 优化 `skin` 皮肤图标为短袖T恤外形
+- 优化 `skin` 皮肤图标为短袖 T 恤外形
 - 更新 Icon 组件文档，添加主题类图标展示
 
 ## 1.1.2

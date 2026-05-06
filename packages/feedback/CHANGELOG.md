@@ -1,5 +1,44 @@
 ﻿# @xto/feedback
 
+## 1.1.8
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+
+## 1.1.7
+
+### Patch Changes
+
+- Add Timeline and TimelineItem components for displaying timeline data
+
+## 1.1.6
+
+### Patch Changes
+
+- Fix Drawer footer slot display issue: body height now correctly accounts for footer presence
+
+## 1.1.3
+
+### Patch Changes
+
+- Add business components: AppCard, Chat, LogTable, ApiDoc, VarTag
+
+  - AppCard: Application card with status indicator
+  - Chat: AI chat interface with code block parsing
+  - LogTable: Session log table with pagination
+  - ApiDoc: API documentation with curl examples
+  - VarTag: Variable type tags
+
+  Enhance form components:
+
+  - DrawerForm: Drawer-style form component
+  - DynamicFields: Dynamic field add/remove functionality
+  - IconPicker: Icon selection component
+  - ColorPicker: Color selection functionality
+
 ## 1.0.3
 
 ### Patch Changes

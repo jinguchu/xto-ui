@@ -1,5 +1,42 @@
 ﻿# @xto/form
 
+## 1.1.4
+
+### Patch Changes
+
+- Fix Table component fixed column support and DatePicker showTime feature
+  - Table: Add proper sticky positioning for fixed columns (left/right)
+  - Table: Fix column ordering to preserve insertion order
+  - TableColumn: Make prop optional for operation columns
+  - DatePicker: Add showTime prop with time selector UI
+
+## 1.1.3
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+
+## 1.1.2
+
+### Patch Changes
+
+- Add business components: AppCard, Chat, LogTable, ApiDoc, VarTag
+
+  - AppCard: Application card with status indicator
+  - Chat: AI chat interface with code block parsing
+  - LogTable: Session log table with pagination
+  - ApiDoc: API documentation with curl examples
+  - VarTag: Variable type tags
+
+  Enhance form components:
+
+  - DrawerForm: Drawer-style form component
+  - DynamicFields: Dynamic field add/remove functionality
+  - IconPicker: Icon selection component
+  - ColorPicker: Color selection functionality
+
 ## 1.0.2
 
 ### Patch Changes

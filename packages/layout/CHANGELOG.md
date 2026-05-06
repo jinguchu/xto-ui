@@ -1,5 +1,13 @@
 ﻿# @xto/layout
 
+## 1.0.7
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

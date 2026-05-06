@@ -1,12 +1,12 @@
-import { defineComponent as d, computed as s, resolveComponent as w, openBlock as c, createElementBlock as i, mergeProps as _, createBlock as B, createCommentVNode as p, renderSlot as v, createTextVNode as k, toDisplayString as y, normalizeStyle as f, normalizeClass as M, createElementVNode as g, unref as b, withDirectives as C, vShow as S, provide as D, toRefs as N } from "vue";
-import { useNamespace as u } from "@xto/core";
-const P = ["disabled", "type"], T = {
+import { defineComponent as k, computed as d, resolveComponent as T, openBlock as i, createElementBlock as c, mergeProps as X, createBlock as j, createCommentVNode as b, renderSlot as z, createTextVNode as B, toDisplayString as $, normalizeStyle as y, normalizeClass as o, createElementVNode as m, unref as n, withDirectives as D, vShow as E, provide as W, toRefs as R, ref as _, watch as S, Fragment as I, renderList as P, vModelText as q } from "vue";
+import { useNamespace as V } from "@xto/core";
+const F = ["disabled", "type"], K = {
   key: 1,
   class: "x-button__icon"
-}, X = {
+}, O = {
   key: 2,
   class: "x-button__text"
-}, O = /* @__PURE__ */ d({
+}, i0 = /* @__PURE__ */ k({
   name: "XButton",
   inheritAttrs: !1,
   __name: "index",
@@ -24,49 +24,49 @@ const P = ["disabled", "type"], T = {
   },
   emits: ["click"],
   setup(l, { emit: a }) {
-    const e = l, t = a, n = u("button"), o = s(() => e.nativeType || e.htmlType || "button"), r = s(() => {
-      const { type: m, size: z, disabled: H, loading: A, plain: L, round: $, circle: x } = e;
+    const e = l, s = a, t = V("button"), r = d(() => e.nativeType || e.htmlType || "button"), h = d(() => {
+      const { type: M, size: p, disabled: g, loading: L, plain: A, round: C, circle: w } = e;
       return [
-        n.b(),
-        n.m(m || "default"),
-        z !== "default" ? n.m(z) : "",
-        n.is("disabled", H),
-        n.is("loading", A),
-        n.is("plain", L),
-        n.is("round", $),
-        n.is("circle", x)
+        t.b(),
+        t.m(M || "default"),
+        p !== "default" ? t.m(p) : "",
+        t.is("disabled", g),
+        t.is("loading", L),
+        t.is("plain", A),
+        t.is("round", C),
+        t.is("circle", w)
       ].filter(Boolean);
-    }), h = (m) => {
+    }), v = (M) => {
       if (e.disabled || e.loading) {
-        m.preventDefault(), m.stopPropagation();
+        M.preventDefault(), M.stopPropagation();
         return;
       }
-      t("click", m);
+      s("click", M);
     };
-    return (m, z) => {
-      const H = w("x-loading");
-      return c(), i("button", _(m.$attrs, {
-        class: r.value,
+    return (M, p) => {
+      const g = T("x-loading");
+      return i(), c("button", X(M.$attrs, {
+        class: h.value,
         disabled: l.disabled || l.loading,
-        type: o.value,
-        onClick: h
+        type: r.value,
+        onClick: v
       }), [
-        l.loading ? (c(), B(H, {
+        l.loading ? (i(), j(g, {
           key: 0,
           class: "is-loading"
-        })) : p("", !0),
-        l.icon && !l.loading ? (c(), i("span", T, [
-          v(m.$slots, "icon", {}, () => [
-            k(y(l.icon), 1)
+        })) : b("", !0),
+        l.icon && !l.loading ? (i(), c("span", K, [
+          z(M.$slots, "icon", {}, () => [
+            B($(l.icon), 1)
           ])
-        ])) : p("", !0),
-        m.$slots.default ? (c(), i("span", X, [
-          v(m.$slots, "default")
-        ])) : p("", !0)
-      ], 16, P);
+        ])) : b("", !0),
+        M.$slots.default ? (i(), c("span", O, [
+          z(M.$slots, "default")
+        ])) : b("", !0)
+      ], 16, F);
     };
   }
-}), R = /* @__PURE__ */ d({
+}), c0 = /* @__PURE__ */ k({
   name: "XLoading",
   __name: "index",
   props: {
@@ -74,22 +74,22 @@ const P = ["disabled", "type"], T = {
     color: {}
   },
   setup(l) {
-    const a = l, e = u("loading"), t = s(() => [
+    const a = l, e = V("loading"), s = d(() => [
       e.e("spinner"),
       a.size !== "default" ? e.em("spinner", a.size) : ""
-    ]), n = s(() => ({
+    ]), t = d(() => ({
       borderColor: a.color ? `${a.color} transparent transparent transparent` : void 0
     }));
-    return (o, r) => (c(), i("span", {
-      class: M(t.value),
-      style: f(n.value)
+    return (r, h) => (i(), c("span", {
+      class: o(s.value),
+      style: y(t.value)
     }, [
-      g("span", {
-        class: M(b(e).e("circle"))
+      m("span", {
+        class: o(n(e).e("circle"))
       }, null, 2)
     ], 6));
   }
-}), V = {
+}), H = {
   // 箭头类
   "arrow-up": "M12 19V5m0 0l-7 7m7-7l7 7",
   "arrow-down": "M12 5v14m0 0l7-7m-7 7l-7-7",
@@ -99,6 +99,9 @@ const P = ["disabled", "type"], T = {
   "arrow-down-bold": "M12 19l7-7h-4V5H9v7H5l7 7z",
   "arrow-left-bold": "M5 12l7-7v4h7v6h-7v4l-7-7z",
   "arrow-right-bold": "M19 12l-7 7v-4H5v-6h7V5l7 7z",
+  // 树形结构类
+  "caret-down": "M6 9l6 6 6-6",
+  "caret-right": "M9 18l6-6-6-6",
   // 操作类
   plus: "M12 5v14m-7-7h14",
   minus: "M5 12h14",
@@ -175,6 +178,7 @@ const P = ["disabled", "type"], T = {
   "menu-expand": "M4 6h16M10 12h10M4 18h16",
   "sidebar-fold": "M11 19l-7-7 7-7m8 14l-7-7 7-7",
   "sidebar-expand": "M13 5l7 7-7 7M5 5l7 7-7 7",
+  "sidebar-left": "M11 19l-7-7 7-7m8 14l-7-7 7-7",
   // 菜单导航类
   dashboard: "M4 5a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 12a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1v-7z",
   chart: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
@@ -210,16 +214,16 @@ const P = ["disabled", "type"], T = {
   theme: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
   skin: "M7 4h2v1c0 1.66 1.34 3 3 3s3-1.34 3-3V4h2l3 3v6h-4l1 3v5H7v-5l1-3H4V7l3-3z"
 };
-function F(l) {
-  return V[l];
+function r0(l) {
+  return H[l];
 }
-function G() {
-  return Object.keys(V);
+function U() {
+  return Object.keys(H);
 }
-function I(l) {
-  return l in V;
+function G(l) {
+  return l in H;
 }
-const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
+const J = ["stroke-width"], Q = ["d"], m0 = /* @__PURE__ */ k({
   name: "XIcon",
   __name: "index",
   props: {
@@ -230,21 +234,21 @@ const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
     strokeWidth: { default: 2 }
   },
   setup(l) {
-    const a = l, e = u("icon"), t = s(() => typeof a.size == "number" ? `${a.size}px` : a.size), n = s(() => ({
-      width: t.value,
-      height: t.value,
+    const a = l, e = V("icon"), s = d(() => typeof a.size == "number" ? `${a.size}px` : a.size), t = d(() => ({
+      width: s.value,
+      height: s.value,
       color: a.color
-    })), o = s(() => ({
+    })), r = d(() => ({
       strokeWidth: a.strokeWidth
-    })), r = s(() => [
+    })), h = d(() => [
       e.b(),
       e.is("spin", a.spin)
-    ]), h = s(() => a.name && I(a.name) ? V[a.name] : "");
-    return (m, z) => (c(), i("span", {
-      class: M(r.value),
-      style: f(n.value)
+    ]), v = d(() => a.name && G(a.name) ? H[a.name] : "");
+    return (M, p) => (i(), c("span", {
+      class: o(h.value),
+      style: y(t.value)
     }, [
-      h.value ? (c(), i("svg", {
+      v.value ? (i(), c("svg", {
         key: 0,
         viewBox: "0 0 24 24",
         fill: "none",
@@ -252,15 +256,15 @@ const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
         "stroke-width": l.strokeWidth,
         "stroke-linecap": "round",
         "stroke-linejoin": "round",
-        style: f(o.value)
+        style: y(r.value)
       }, [
-        g("path", { d: h.value }, null, 8, j)
-      ], 12, W)) : v(m.$slots, "default", { key: 1 }, () => [
-        k(y(l.name), 1)
+        m("path", { d: v.value }, null, 8, Q)
+      ], 12, J)) : z(M.$slots, "default", { key: 1 }, () => [
+        B($(l.name), 1)
       ])
     ], 6));
   }
-}), K = /* @__PURE__ */ d({
+}), d0 = /* @__PURE__ */ k({
   name: "XBadge",
   __name: "index",
   props: {
@@ -271,28 +275,28 @@ const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
     type: { default: "primary" }
   },
   setup(l) {
-    const a = l, e = u("badge"), t = s(() => {
+    const a = l, e = V("badge"), s = d(() => {
       if (a.isDot) return "";
-      const o = Number(a.value);
-      return isNaN(o) ? a.value : o > a.max ? `${a.max}+` : o;
-    }), n = s(() => [
+      const r = Number(a.value);
+      return isNaN(r) ? a.value : r > a.max ? `${a.max}+` : r;
+    }), t = d(() => [
       e.b(),
       e.m(a.type),
       e.is("dot", a.isDot)
     ]);
-    return (o, r) => l.hidden ? v(o.$slots, "default", { key: 1 }) : (c(), i("span", {
+    return (r, h) => l.hidden ? z(r.$slots, "default", { key: 1 }) : (i(), c("span", {
       key: 0,
-      class: M(n.value)
+      class: o(t.value)
     }, [
-      v(o.$slots, "default"),
-      C(g("sup", {
-        class: M(b(e).e("content"))
-      }, y(t.value), 3), [
-        [S, t.value || l.isDot]
+      z(r.$slots, "default"),
+      D(m("sup", {
+        class: o(n(e).e("content"))
+      }, $(s.value), 3), [
+        [E, s.value || l.isDot]
       ])
     ], 2));
   }
-}), Q = /* @__PURE__ */ d({
+}), h0 = /* @__PURE__ */ k({
   name: "XSpace",
   __name: "index",
   props: {
@@ -303,37 +307,37 @@ const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
     fill: { type: Boolean, default: !1 }
   },
   setup(l) {
-    const a = l, e = u("space"), t = s(() => {
-      const r = {
+    const a = l, e = V("space"), s = d(() => {
+      const h = {
         large: 16,
         default: 8,
         small: 4
       };
-      return Array.isArray(a.size) ? a.size.map((h) => typeof h == "number" ? `${h}px` : `${r[h]}px`) : typeof a.size == "number" ? `${a.size}px` : `${r[a.size]}px`;
-    }), n = s(() => [
+      return Array.isArray(a.size) ? a.size.map((v) => typeof v == "number" ? `${v}px` : `${h[v]}px`) : typeof a.size == "number" ? `${a.size}px` : `${h[a.size]}px`;
+    }), t = d(() => [
       e.b(),
       e.m(a.direction),
       e.m(`align-${a.alignment}`),
       e.is("wrap", a.wrap),
       e.is("fill", a.fill)
-    ]), o = s(() => [
+    ]), r = d(() => [
       e.be("item", "space-item")
     ]);
-    return D("space", {
-      ...N(a),
-      spacing: t,
-      itemClasses: o
-    }), (r, h) => (c(), i("div", {
-      class: M(n.value),
-      style: f({
-        "--x-space-size": Array.isArray(t.value) ? t.value[0] : t.value,
-        gap: Array.isArray(t.value) ? t.value.join(" ") : t.value
+    return W("space", {
+      ...R(a),
+      spacing: s,
+      itemClasses: r
+    }), (h, v) => (i(), c("div", {
+      class: o(t.value),
+      style: y({
+        "--x-space-size": Array.isArray(s.value) ? s.value[0] : s.value,
+        gap: Array.isArray(s.value) ? s.value.join(" ") : s.value
       })
     }, [
-      v(r.$slots, "default")
+      z(h.$slots, "default")
     ], 6));
   }
-}), U = /* @__PURE__ */ d({
+}), u0 = /* @__PURE__ */ k({
   name: "XDivider",
   __name: "index",
   props: {
@@ -342,37 +346,297 @@ const W = ["stroke-width"], j = ["d"], J = /* @__PURE__ */ d({
     contentPosition: { default: "center" }
   },
   setup(l) {
-    const a = l, e = u("divider"), t = s(() => [
+    const a = l, e = V("divider"), s = d(() => [
       e.b(),
       e.m(a.direction),
       e.m(a.borderStyle),
       e.is(`content-${a.contentPosition}`, a.direction === "horizontal")
     ]);
-    return (n, o) => l.direction === "horizontal" ? (c(), i("div", {
+    return (t, r) => l.direction === "horizontal" ? (i(), c("div", {
       key: 0,
-      class: M(t.value)
+      class: o(s.value)
     }, [
-      n.$slots.default ? (c(), i("span", {
+      t.$slots.default ? (i(), c("span", {
         key: 0,
-        class: M(b(e).e("text"))
+        class: o(n(e).e("text"))
       }, [
-        v(n.$slots, "default")
-      ], 2)) : p("", !0)
-    ], 2)) : (c(), i("div", {
+        z(t.$slots, "default")
+      ], 2)) : b("", !0)
+    ], 2)) : (i(), c("div", {
       key: 1,
-      class: M(t.value)
+      class: o(s.value)
     }, null, 2));
+  }
+}), Y = {
+  key: 0,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "white",
+  "stroke-width": "2",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  style: { width: "60%", height: "60%" }
+}, Z = ["d"], a0 = ["onClick"], e0 = ["title", "onClick"], l0 = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-width": "2",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}, t0 = ["d"], v0 = /* @__PURE__ */ k({
+  name: "XIconPicker",
+  __name: "index",
+  props: {
+    modelValue: { default: "" },
+    background: { default: "#409eff" },
+    size: { default: 48 }
+  },
+  emits: ["update:modelValue", "update:background", "change"],
+  setup(l, { emit: a }) {
+    const e = l, s = a, t = V("icon-picker"), r = [
+      "#409eff",
+      // primary blue
+      "#67c23a",
+      // success green
+      "#e6a23c",
+      // warning orange
+      "#f56c6c",
+      // danger red
+      "#909399",
+      // info gray
+      "#722ed1",
+      // purple
+      "#13c2c2",
+      // cyan
+      "#eb2f96",
+      // magenta
+      "#fa8c16",
+      // orange
+      "#52c41a",
+      // lime
+      "#2f54eb",
+      // geek blue
+      "#1890ff"
+      // blue
+    ], h = U(), v = _(""), M = d(() => {
+      if (!v.value) return h;
+      const u = v.value.toLowerCase();
+      return h.filter((x) => x.includes(u));
+    }), p = _(e.modelValue), g = _(e.background);
+    S(() => e.modelValue, (u) => {
+      p.value = u;
+    }), S(() => e.background, (u) => {
+      g.value = u;
+    });
+    const L = (u) => {
+      p.value = u, s("update:modelValue", u), s("change", u, g.value);
+    }, A = (u) => {
+      g.value = u, s("update:background", u), s("change", p.value, u);
+    }, C = d(() => ({
+      width: `${e.size}px`,
+      height: `${e.size}px`,
+      backgroundColor: g.value,
+      borderRadius: "12px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    })), w = (u) => H[u] || "";
+    return (u, x) => (i(), c("div", {
+      class: o(n(t).b())
+    }, [
+      m("div", {
+        class: o(n(t).e("preview"))
+      }, [
+        m("div", {
+          style: y(C.value)
+        }, [
+          p.value ? (i(), c("svg", Y, [
+            m("path", {
+              d: w(p.value)
+            }, null, 8, Z)
+          ])) : (i(), c("span", {
+            key: 1,
+            class: o(n(t).e("preview-placeholder"))
+          }, " 选择图标 ", 2))
+        ], 4)
+      ], 2),
+      m("div", {
+        class: o(n(t).e("section"))
+      }, [
+        m("div", {
+          class: o(n(t).e("label"))
+        }, "背景颜色", 2),
+        m("div", {
+          class: o(n(t).e("backgrounds"))
+        }, [
+          (i(), c(I, null, P(r, (f) => m("div", {
+            key: f,
+            class: o([
+              n(t).e("background-item"),
+              n(t).is("selected", g.value === f)
+            ]),
+            style: y({ backgroundColor: f }),
+            onClick: (N) => A(f)
+          }, null, 14, a0)), 64))
+        ], 2)
+      ], 2),
+      m("div", {
+        class: o(n(t).e("section"))
+      }, [
+        m("div", {
+          class: o(n(t).e("label"))
+        }, "选择图标", 2),
+        D(m("input", {
+          "onUpdate:modelValue": x[0] || (x[0] = (f) => v.value = f),
+          class: o(n(t).e("search")),
+          type: "text",
+          placeholder: "搜索图标..."
+        }, null, 2), [
+          [q, v.value]
+        ]),
+        m("div", {
+          class: o(n(t).e("icons"))
+        }, [
+          (i(!0), c(I, null, P(M.value, (f) => (i(), c("div", {
+            key: f,
+            class: o([
+              n(t).e("icon-item"),
+              n(t).is("selected", p.value === f)
+            ]),
+            title: f,
+            onClick: (N) => L(f)
+          }, [
+            (i(), c("svg", l0, [
+              m("path", {
+                d: w(f)
+              }, null, 8, t0)
+            ]))
+          ], 10, e0))), 128))
+        ], 2)
+      ], 2)
+    ], 2));
+  }
+}), s0 = ["src"], M0 = /* @__PURE__ */ k({
+  name: "XEmpty",
+  __name: "index",
+  props: {
+    description: { default: "暂无数据" },
+    image: { default: "" },
+    imageSize: { default: 100 }
+  },
+  setup(l) {
+    const a = l, e = V("empty"), s = d(() => ({
+      width: typeof a.imageSize == "number" ? `${a.imageSize}px` : a.imageSize,
+      height: typeof a.imageSize == "number" ? `${a.imageSize}px` : a.imageSize
+    }));
+    return (t, r) => (i(), c("div", {
+      class: o(n(e).b())
+    }, [
+      m("div", {
+        class: o(n(e).e("image"))
+      }, [
+        z(t.$slots, "image", {}, () => [
+          l.image ? (i(), c("img", {
+            key: 0,
+            src: l.image,
+            style: y(s.value),
+            alt: "empty"
+          }, null, 12, s0)) : (i(), c("svg", {
+            key: 1,
+            style: y(s.value),
+            viewBox: "0 0 100 100",
+            xmlns: "http://www.w3.org/2000/svg"
+          }, [...r[0] || (r[0] = [
+            m("rect", {
+              x: "20",
+              y: "30",
+              width: "60",
+              height: "50",
+              rx: "4",
+              fill: "#f5f5f5",
+              stroke: "#d9d9d9"
+            }, null, -1),
+            m("circle", {
+              cx: "50",
+              cy: "55",
+              r: "12",
+              fill: "#e0e0e0"
+            }, null, -1),
+            m("rect", {
+              x: "44",
+              y: "48",
+              width: "12",
+              height: "3",
+              rx: "1.5",
+              fill: "#bfbfbf"
+            }, null, -1),
+            m("path", {
+              d: "M35 35 L40 30 L60 30 L65 35",
+              stroke: "#d9d9d9",
+              fill: "none"
+            }, null, -1)
+          ])], 4))
+        ])
+      ], 2),
+      m("div", {
+        class: o(n(e).e("description"))
+      }, [
+        z(t.$slots, "default", {}, () => [
+          B($(l.description), 1)
+        ])
+      ], 2)
+    ], 2));
+  }
+}), f0 = /* @__PURE__ */ k({
+  name: "XTag",
+  __name: "index",
+  props: {
+    type: { default: "default" },
+    size: { default: "default" },
+    effect: { default: "light" },
+    color: {},
+    round: { type: Boolean, default: !1 },
+    closable: { type: Boolean, default: !1 }
+  },
+  emits: ["close", "click"],
+  setup(l, { emit: a }) {
+    const e = a, s = V("tag"), t = (h) => {
+      h.stopPropagation(), e("close");
+    }, r = () => {
+      e("click");
+    };
+    return (h, v) => (i(), c("span", {
+      class: o([
+        n(s).b(),
+        n(s).m(l.type),
+        n(s).m(l.size),
+        n(s).m(l.effect),
+        n(s).is("round", l.round)
+      ]),
+      style: y(l.color ? { backgroundColor: l.color } : void 0),
+      onClick: r
+    }, [
+      z(h.$slots, "default"),
+      l.closable ? (i(), c("span", {
+        key: 0,
+        class: o(n(s).e("close")),
+        onClick: t
+      }, " ✕ ", 2)) : b("", !0)
+    ], 6));
   }
 });
 export {
-  K as Badge,
-  O as Button,
-  U as Divider,
-  J as Icon,
-  R as Loading,
-  Q as Space,
-  G as getIconNames,
-  F as getIconPath,
-  I as hasIcon,
-  V as icons
+  d0 as Badge,
+  i0 as Button,
+  u0 as Divider,
+  M0 as Empty,
+  m0 as Icon,
+  v0 as IconPicker,
+  c0 as Loading,
+  h0 as Space,
+  f0 as Tag,
+  U as getIconNames,
+  r0 as getIconPath,
+  G as hasIcon,
+  H as icons
 };

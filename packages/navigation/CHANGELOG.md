@@ -1,5 +1,26 @@
 ﻿# @xto/navigation
 
+## 1.2.5
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+  - @xto/base@1.3.6
+
+## 1.2.3
+
+### Patch Changes
+
+- fix: 修复菜单组件暗黑模式样式问题，增强水平菜单和子菜单的暗黑主题支持
+
+## 1.2.2
+
+### Patch Changes
+
+- 修复菜单组件在暗黑模式下的样式问题，使用 CSS 变量替代硬编码颜色值
+
 ## 1.1.0
 
 ### Minor Changes

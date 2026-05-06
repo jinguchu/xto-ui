@@ -148,14 +148,93 @@ pnpm install
 
 ```
 packages/
-├── core        # 核心：主题、hooks、工具函数、类型
-├── base        # 基础组件：Button、Icon、Badge 等
-├── form        # 表单组件：Input、Select、Form 等
-├── data        # 数据展示：Table、Card、Tag 等
-├── feedback    # 反馈组件：Modal、Drawer、Alert 等
-├── navigation  # 导航组件：Menu、Tabs、Breadcrumb 等
-├── layout      # 布局组件：Grid、Container 等
-└── business    # 业务组件：ProTable、SearchForm 等
+├── core              # 核心：主题、hooks、工具函数、类型
+├── base              # 基础组件：Button、Icon、Badge 等
+├── form              # 表单组件：Input、Select、Form 等
+├── data              # 数据展示：Table、Card、Tag 等
+├── feedback          # 反馈组件：Modal、Drawer、Alert 等
+├── navigation        # 导航组件：Menu、Tabs、Breadcrumb 等
+├── layout            # 布局组件：Grid、Container 等
+├── business          # 业务组件：ProTable、SearchForm 等
+├── flow              # 流程组件：FlowEditor、StartNode、AINode 等
+│
+├── lowcode-shared    # 低代码共享：Schema 定义、代码生成器
+├── designer          # 页面设计器：可视化拖拽布局
+├── form-builder      # 表单构建器：Schema → XtoForm
+├── flow-orchestrator # 流程编排器：扩展节点（Condition、Loop、Tool）
+│
+└── docs              # 文档目录
+    ├── schema-spec.md
+    ├── designer/
+    ├── form-builder/
+    └── flow-orchestrator/
+```
+
+## A2UI 低代码组件
+
+A2UI 是 XTO UI 的低代码扩展，提供可视化页面构建能力。
+
+### 包列表
+
+| 包名 | 说明 | npm 名称 |
+|------|------|----------|
+| lowcode-shared | Schema 定义 + 代码生成 | `@xto/lowcode-shared` |
+| designer | 页面设计器 | `@xto/designer` |
+| form-builder | 表单构建器 | `@xto/form-builder` |
+| flow-orchestrator | 流程编排器 | `@xto/flow-orchestrator` |
+
+### 快速使用
+
+#### 页面设计器
+
+```vue
+<script setup>
+import { PageDesigner } from '@xto/designer'
+</script>
+
+<template>
+  <PageDesigner @save="handleSave" @export="handleExport" />
+</template>
+```
+
+#### 表单构建器
+
+```vue
+<script setup>
+import { FormBuilder } from '@xto/form-builder'
+</script>
+
+<template>
+  <FormBuilder @save="handleSave" @export="handleExport" />
+</template>
+```
+
+#### 流程编排器
+
+```vue
+<script setup>
+import { FlowOrchestrator, ConditionNode, LoopNode, ToolNode } from '@xto/flow-orchestrator'
+</script>
+
+<template>
+  <FlowOrchestrator @save="handleSave" />
+</template>
+```
+
+### Schema 规范
+
+详见 [docs/schema-spec.md](docs/schema-spec.md)
+
+- **PageSchema** - 页面配置（布局 + 组件列表）
+- **FormSchema** - 表单配置（字段 + 校验规则）
+- **FlowSchema** - 流程配置（节点 + 连线）
+
+### 依赖关系
+
+```
+designer → form, data, layout, lowcode-shared
+form-builder → form, lowcode-shared
+flow-orchestrator → flow, lowcode-shared
 ```
 
 ## 许可证

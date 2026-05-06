@@ -1,5 +1,40 @@
 ﻿# @xto/business
 
+## 1.1.1
+
+### Patch Changes
+
+- Add homepage and repository documentation links to all packages
+- Updated dependencies
+  - @xto/core@1.0.3
+  - @xto/base@1.3.6
+  - @xto/form@1.1.3
+  - @xto/data@1.1.3
+
+## 1.1.0
+
+### Minor Changes
+
+- Add business components: AppCard, Chat, LogTable, ApiDoc, VarTag
+
+  - AppCard: Application card with status indicator
+  - Chat: AI chat interface with code block parsing
+  - LogTable: Session log table with pagination
+  - ApiDoc: API documentation with curl examples
+  - VarTag: Variable type tags
+
+  Enhance form components:
+
+  - DrawerForm: Drawer-style form component
+  - DynamicFields: Dynamic field add/remove functionality
+  - IconPicker: Icon selection component
+  - ColorPicker: Color selection functionality
+
+### Patch Changes
+
+- Updated dependencies
+  - @xto/form@1.1.2
+
 ## 1.0.2
 
 ### Patch Changes

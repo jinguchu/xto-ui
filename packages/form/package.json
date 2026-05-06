@@ -1,7 +1,13 @@
 {
   "name": "@xto/form",
-  "version": "1.1.0",
+  "version": "1.1.9",
   "description": "Xto Form - Form components",
+  "homepage": "https://jinguchu.github.io/xto-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinguchu/xto-ui.git",
+    "directory": "packages/form"
+  },
   "main": "./lib/index.cjs",
   "module": "./es/index.mjs",
   "types": "./es/index.d.ts",
@@ -24,12 +30,14 @@
     "dev": "vite build --watch"
   },
   "dependencies": {
-    "@xto/core": "^1.0.0"
+    "@xto/core": "^1.0.3"
   },
   "peerDependencies": {
     "vue": "^3.4.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@xto/build": "workspace:*",
     "typescript": "^5.4.2",
     "vite": "^5.2.0",

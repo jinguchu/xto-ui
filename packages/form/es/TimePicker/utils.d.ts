@@ -1,0 +1,10 @@
+export declare function isSameTime(time1: Date, time2: Date): boolean;
+export declare function isTimeInRange(time: Date, startTime: Date | null, endTime: Date | null): boolean;
+export declare function formatTime(date: Date | null | undefined, format?: string): string;
+export declare function parseTime(value: string | Date | number | null | undefined): Date | null;
+export declare function setTime(date: Date, hours: number, minutes: number, seconds?: number): Date;
+export declare function cloneTime(date: Date): Date;
+export declare function generateTimeList(step?: number): number[];
+export declare function generateHourList(use12Hour?: boolean): number[];
+export declare function isTimeDisabled(time: Date, disabledHours?: () => number[], disabledMinutes?: (hour: number) => number[], disabledSeconds?: (hour: number, minute: number) => number[]): boolean;
+export declare function padZero(num: number): string;

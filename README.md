@@ -2,6 +2,12 @@
 
 Xto UI 是一个基于 Vue 3 的组件库，使用 TypeScript 开发，支持按需引入。
 
+## 文档与当前版本
+
+- [在线手册](https://jinguchu.github.io/xto-ui/)
+- [本次更新说明](https://jinguchu.github.io/xto-ui/guide/changelog.html)：`@xto/form@1.8.3`（2026-11-10）。各子包独立版本管理。
+- 应用安装：`pnpm add @xto/form@^1.8.3`；以下 `pnpm install` 用于源码仓库开发。
+
 ## 技术栈
 
 - Vue 3.4+

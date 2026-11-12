@@ -246,3 +246,10 @@ flow-orchestrator → flow, lowcode-shared
 ## 许可证
 
 MIT
+## 完整开发手册（2026-11-12）
+
+- [组件示例与使用指南](https://jinguchu.github.io/xto-ui/components/)
+- [156 个公开组件及子组件 API](https://jinguchu.github.io/xto-ui/reference/)
+- [主题、密度与样式顺序](https://jinguchu.github.io/xto-ui/guide/theming.html)
+
+本次更新修复文档样式覆盖、补齐导航与在线演示，并由源码生成 Props、Events、Slots 和实例成员参考。
